@@ -1,18 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UserDataRegisterer : MonoBehaviour
+public class MainManager : Singleton<MainManager>
 {
-    public GameManager gm;
-    public Text userName;
-    public Text userPlace;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,7 +15,9 @@ public class UserDataRegisterer : MonoBehaviour
     {
         
     }
-    public void Register(){
-        gm.UserRegister(userName.text, userPlace.text);
+
+    public void OpenConfig()
+    {
+        MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.CONFIG);
     }
 }

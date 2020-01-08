@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitleManager : MonoBehaviour
+public class TitleManager : Singleton<TitleManager>
 {
     // Start is called before the first frame update
     void Start()
@@ -13,11 +13,17 @@ public class TitleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            PlayerPrefs.DeleteKey("UserData");
+        }
+
+
         if (TouchManager.Instance.m_TouchFlag)
         {
-            if (TouchManager.Instance.m_TouchPos.x < Screen.width / 2)
+            if (!PlayerPrefs.HasKey("UserData"))
             {
-                MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.SETTING);
+                MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.REGISTER);
             }
             else
             {
