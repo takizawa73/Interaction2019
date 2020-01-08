@@ -8,8 +8,9 @@ public class MySceneManager : Singleton<MySceneManager>
     public enum E_Scene
     {
         TITLE   = 0,
-        SETTING = 1,
+        REGISTER= 1,
         MAIN    = 2,
+        CONFIG  = 3,
     }
 
     public E_Scene m_Scene;
@@ -29,14 +30,19 @@ public class MySceneManager : Singleton<MySceneManager>
 
     public void ChangeScene(E_Scene scene)
     {
-        if (scene == E_Scene.SETTING)
+        if (scene == E_Scene.REGISTER)
         {
-            SceneManager.LoadScene("FirstSetting");
+            SceneManager.LoadScene("Register");
         }
 
         if (scene == E_Scene.MAIN)
         {
             SceneManager.LoadScene("Main");
+        }
+
+        if (scene == E_Scene.CONFIG)
+        {
+            SceneManager.LoadScene("Config");
         }
     }
 }

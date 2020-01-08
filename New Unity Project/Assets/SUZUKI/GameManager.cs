@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : Singleton<GameManager> {
 
     const string _SaveKey = "UserData";
     public User user;
@@ -32,9 +32,14 @@ public class GameManager : MonoBehaviour {
     }
 
     public void UserRegister(string name,string place){
+        if (user == null)
+        {
+            user = new User();
+        }
         user.nickname=name;
         user.comeplace=place;
         Save();
+        MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.MAIN);
     }
     public void SendMesRegister(string message,float distance){
         SentMessage st=new SentMessage();

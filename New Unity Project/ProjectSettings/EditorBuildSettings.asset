@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 75adfe28125a2424a8317418d38ce443
+  - enabled: 1
+    path: Assets/SUZUKI/Register.unity
+    guid: 4ef5bf5b06aeef94dab97df5cbd0c793
+  - enabled: 1
+    path: Assets/SUZUKI/Config.unity
+    guid: f77a0d5402c288f4b97f7af7d60cb937
   m_configObjects: {}
