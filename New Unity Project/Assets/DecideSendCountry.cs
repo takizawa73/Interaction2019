@@ -87,7 +87,7 @@ public class DecideSendCountry : MonoBehaviour
                 NearLat = double.Parse(csvDatas[i][2]);
                 NearLon = double.Parse(csvDatas[i][3]);
                 Nearnum = i;
-                //Debug.Log(csvDatas[i][1]);
+                Debug.Log("PointDisttance" + PointDistance + ", " + csvDatas[i][1]);
             }
         }
         Debug.Log(csvDatas[Nearnum][0] + ", " + NearLat + ", " + NearLon);

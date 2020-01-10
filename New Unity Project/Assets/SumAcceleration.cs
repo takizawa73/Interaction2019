@@ -68,7 +68,7 @@ public class SumAcceleration : MonoBehaviour
         SUMy += dir.y;
         SUMz += dir.z;
         SUMall = SUMx + SUMy + SUMz;
-        Distance = SUMall * (-10000);
+        Distance = SUMall * 0;
 
         //DrawLines ();
     }
@@ -109,9 +109,11 @@ public class SumAcceleration : MonoBehaviour
         //Longitude = update.Location.longitude;
         //Debug.Log(Longitude);
         //Distance = 1000000;
-        Heading = 180;
-        Latitude = 35.5557358;
-        Longitude = 139.6537767;
+        Heading = 0;
+        //Latitude = 35.5557358;
+        // Longitude = 139.6537767;
+        Latitude = 35.7090259;
+        Longitude = 139.7319925;
     }
 }
 

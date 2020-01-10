@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 262609605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0e2e02e9bae7649865e95c8392df99, type: 3}
+  m_Script: {fileID: 11500000, guid: 04936bed834a9ab46af93cbd06f0bc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GetInput: {fileID: 1915362035}
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 467763528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a49495ccb658b429c2ca12dc891e68, type: 3}
+  m_Script: {fileID: 11500000, guid: 0548754e6e6568c43a7513af77e9d29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deliverText: 
@@ -781,7 +781,6 @@ GameObject:
   - component: {fileID: 1915362037}
   - component: {fileID: 1915362036}
   - component: {fileID: 1915362035}
-  - component: {fileID: 1915362039}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -905,18 +904,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -44}
   m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1915362039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915362034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fcb41f0b6711b34db677050475634d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1927877649
 GameObject:
   m_ObjectHideFlags: 0
