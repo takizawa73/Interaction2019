@@ -15,6 +15,7 @@ public class MySceneManager : Singleton<MySceneManager>
         MAIN    = 2,
         CONFIG  = 3,
         GAME    = 4,
+        DICT    = 5,
     }
 
     public E_Scene m_Scene;
@@ -87,6 +88,11 @@ public class MySceneManager : Singleton<MySceneManager>
         if (scene == E_Scene.GAME)
         {
             SceneManager.LoadScene("TextInoutScene");
+        }
+
+        if (scene == E_Scene.DICT)
+        {
+            SceneManager.LoadScene("CountryList");
         }
     }
 }

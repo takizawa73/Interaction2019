@@ -25,4 +25,9 @@ public class MainManager : Singleton<MainManager>
     {
         MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.GAME);
     }
+
+    public void OpenDictionary()
+    {
+        MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.DICT);
+    }
 }
