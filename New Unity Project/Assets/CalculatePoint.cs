@@ -58,15 +58,19 @@ void Start()
     // Update is called once per frame
     public void CalPoint()
     {
-        Latitude = SumAccscript.Latitude;
-        Longitude = SumAccscript.Longitude;
-        Bearing = SumAccscript.Heading;
+        //Latitude = SumAccscript.Latitude;
+        //Longitude = SumAccscript.Longitude;
+        //Bearing = SumAccscript.Heading;
+        Latitude = 24.288472;
+        Longitude = 153.9707894;
+        Bearing = 276.8697566783211;
+        s = 3143772;
 
         lat1 = Latitude * (Math.PI / 180.0);
         lon1 = Longitude * (Math.PI / 180.0);
 
         brg = Bearing * (Math.PI / 180.0);
-        s = SumAccscript.Distance;
+        //s = SumAccscript.Distance;
         sb = Math.Sin(brg);
         cb = Math.Cos(brg);
         tu1 = (1 - f) * Math.Tan(lat1);
