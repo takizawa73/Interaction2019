@@ -6,11 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ShakeScene.unity
-    guid: 1fd64d74a8472e34494a2d2718fab37d
+    path: Assets/Scenes/Title.unity
+    guid: 2e9020e7f8ba5fe48b15af50278885af
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 75adfe28125a2424a8317418d38ce443
+  - enabled: 1
+    path: Assets/SUZUKI/Register.unity
+    guid: 4ef5bf5b06aeef94dab97df5cbd0c793
+  - enabled: 1
+    path: Assets/SUZUKI/Config.unity
+    guid: f77a0d5402c288f4b97f7af7d60cb937
+  - enabled: 1
+    path: Assets/SUZUKI/MesRegister.unity
+    guid: dd72ec367f90b4c48b6c855c09bf9f4b
   - enabled: 1
     path: Assets/Scenes/ResultScene.unity
     guid: 619f0a12297681c47840ff5b8f16bab6
+  - enabled: 1
+    path: Assets/Scenes/ShakeScene.unity
+    guid: e222840bfb194b6438e6829247ea963b
   - enabled: 1
     path: Assets/Scenes/TextInoutScene.unity
     guid: 61c1e48c613389b42a65288835feca32
