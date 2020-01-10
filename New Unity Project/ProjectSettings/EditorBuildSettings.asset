@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SUZUKI/Config.unity
     guid: f77a0d5402c288f4b97f7af7d60cb937
+  - enabled: 1
+    path: Assets/SUZUKI/MesRegister.unity
+    guid: dd72ec367f90b4c48b6c855c09bf9f4b
   m_configObjects: {}
