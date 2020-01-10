@@ -11,6 +11,7 @@ public class MySceneManager : Singleton<MySceneManager>
         REGISTER= 1,
         MAIN    = 2,
         CONFIG  = 3,
+        GAME    = 4,
     }
 
     public E_Scene m_Scene;
@@ -43,6 +44,11 @@ public class MySceneManager : Singleton<MySceneManager>
         if (scene == E_Scene.CONFIG)
         {
             SceneManager.LoadScene("Config");
+        }
+
+        if (scene == E_Scene.GAME)
+        {
+            SceneManager.LoadScene("TextInoutScene");
         }
     }
 }
