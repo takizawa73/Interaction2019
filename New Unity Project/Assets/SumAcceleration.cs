@@ -39,8 +39,23 @@ public class SumAcceleration : MonoBehaviour
         Vector3 pos = new Vector3(
             center.x + dir.x * scale,
             center.y + dir.y * scale,
-            center.z + dir.z * scale
+            0//center.z + dir.z * scale
         );
+        if(pos.x > 1.5)
+        {
+            pos.x = (float)1.5;
+        }
+        if(pos.y > 1.5){
+            pos.y = (float)1.5;
+        }
+        if (pos.x < -1.5)
+        {
+            pos.x = (float)-1.5;
+        }
+        if (pos.y < -1.5)
+        {
+            pos.y = (float)-1.5;
+        }
         this.transform.position = pos;
 
         if (history.Count >= HISMAX)
@@ -52,11 +67,13 @@ public class SumAcceleration : MonoBehaviour
         SUMx += dir.x;
         SUMy += dir.y;
         SUMz += dir.z;
+        SUMall = SUMx + SUMy + SUMz;
+        Distance = SUMall * (-10000);
 
         //DrawLines ();
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         Vector3 dir = Input.acceleration;
         GUI.TextField(new Rect(10, 10, 100, 100), "X = " + dir.x.ToString());
@@ -65,7 +82,7 @@ public class SumAcceleration : MonoBehaviour
         GUI.TextField(new Rect(10, 70, 100, 100), "SUMx = " + SUMx.ToString());
         GUI.TextField(new Rect(10, 90, 100, 100), "SUMy = " + SUMy.ToString());
         GUI.TextField(new Rect(10, 110, 100, 100), "SUMz = " + SUMz.ToString());
-    }
+    }*/
 
     /*void DrawLines ()
     {
@@ -78,8 +95,8 @@ public class SumAcceleration : MonoBehaviour
 
     public void DecideAddress()
     {
-        SUMall = SUMx + SUMy + SUMz;  //加速度の和
-        Distance = SUMall * (-10000);
+        //SUMall = SUMx + SUMy + SUMz;  //加速度の和
+        //Distance = SUMall * (-10000);
         Debug.Log(SUMall);
         Debug.Log(Distance);
         //Debug.Log("Distance: " + Distance);
@@ -92,7 +109,7 @@ public class SumAcceleration : MonoBehaviour
         //Longitude = update.Location.longitude;
         //Debug.Log(Longitude);
         //Distance = 1000000;
-        Heading = 270;
+        Heading = 180;
         Latitude = 35.5557358;
         Longitude = 139.6537767;
     }

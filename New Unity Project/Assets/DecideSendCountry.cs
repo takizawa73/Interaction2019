@@ -20,6 +20,8 @@ public class DecideSendCountry : MonoBehaviour
     double NearLat;
     double NearLon;
     int Nearnum;
+
+    public string ResultCountry;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,5 +75,6 @@ public class DecideSendCountry : MonoBehaviour
             }
         }
         Debug.Log(csvDatas[Nearnum][0] + ", " + NearLat + ", " + NearLon);
+        ResultCountry = csvDatas[Nearnum][0];
     }
 }

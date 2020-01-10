@@ -126,6 +126,6 @@ void Start()
 
         //Console.WriteLine("{0} {1}", lat2, lon2);
         //Debug.Log(Bearing);
-        Debug.Log(lat2 + ", " + lon2);
+        //Debug.Log(lat2 + ", " + lon2);
     }
 }

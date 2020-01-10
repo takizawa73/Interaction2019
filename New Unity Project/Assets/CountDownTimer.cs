@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountDownTimer : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class CountDownTimer : MonoBehaviour
     CalculatePoint CalPscript;
     DecideSendCountry DecideSendscript;
 
+    GameObject Resultdeliver;
+    ResultDeliver Resultdeliverscript;
+
     //SumAcceleration SumScript;
 
     void Start()
@@ -33,6 +37,10 @@ public class CountDownTimer : MonoBehaviour
         SumAccscript = Sumaho.GetComponent<SumAcceleration>();
         CalPscript = Sumaho.GetComponent<CalculatePoint>();
         DecideSendscript = Sumaho.GetComponent<DecideSendCountry>();
+
+        Resultdeliver = GameObject.Find("ResultDeliver");
+        Resultdeliverscript = Resultdeliver.GetComponent<ResultDeliver>();
+
     }
 
     void Update()
@@ -65,6 +73,12 @@ public class CountDownTimer : MonoBehaviour
             SumAccscript.DecideAddress();
             CalPscript.CalPoint();
             DecideSendscript.DecideSend();
+            Resultdeliverscript.DeliverStr();
+            /*if (Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene("ResultScene");
+            }*/
+            SceneManager.LoadScene("ResultScene");
         }
     }
 }
