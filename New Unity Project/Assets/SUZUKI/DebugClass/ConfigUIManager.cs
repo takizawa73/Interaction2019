@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GetSendMessages : MonoBehaviour
+public class ConfigUIManager : MonoBehaviour
 {
     public GameManager gm;
     public Text sendMessages;
@@ -30,16 +30,21 @@ public class GetSendMessages : MonoBehaviour
         placeText.text=gm.user.comeplace;
         originName.text=gm.user.nickname;
         originPlace.text=gm.user.comeplace;
+        if(Input.GetKeyDown(KeyCode.Space)){
+            gm.MessageAllDelete();
+        }
     }
 
     public void GetSentMes(){
         sendShowCan.enabled=true;
         sendMessages.text="";
         for(int i=0;i<gm.user.sentMessages.Count;i++){
-            sendMessages.text+=gm.user.sentMessages[i].dateTime.ToString()+"\n";
-            sendMessages.text+=gm.user.sentMessages[i].sendPlace+"\n";
-            sendMessages.text+=gm.user.sentMessages[i].distance.ToString()+"\n";
-            sendMessages.text+=gm.user.sentMessages[i].sendMessage+"\n"+"\n"+"\n";
+            sendMessages.text+="送信日：\n"+gm.user.sentMessages[i].dateTime+"\n";
+            //Debug.Log(gm.user.sentMessages[i].dateTime);
+            sendMessages.text+="宛先："+gm.user.sentMessages[i].destination+"\n";
+            sendMessages.text+="発信元："+gm.user.sentMessages[i].sendPlace+"\n";
+            //sendMessages.text+="発信元："+gm.user.sentMessages[i].distance.ToString()+"\n";
+            sendMessages.text+="メッセージ：\n"+gm.user.sentMessages[i].sendMessage+"\n"+"\n"+"\n";
         }
     }
     public void CloseSentMes(){

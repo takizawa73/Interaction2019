@@ -7,7 +7,8 @@ public class SendMessageRegisterer : MonoBehaviour
 {
     public GameManager gm;
     public float distance=10.0f;
-    public Text userName;
+    public Text message;
+    public Text destination;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class SendMessageRegisterer : MonoBehaviour
         
     }
     public void Register(){
-        gm.SendMesRegister(userName.text,distance);
+        //gm.SendMesRegister(userName.text,distance);
+        gm.SaveSendMessage(message.text,destination.text);
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+//セーブデータの管理をするクラス
+//それぞれのシーンに配置して使ってください（セーブデータはシーン遷移の都度読み込まれます）
 public class GameManager : Singleton<GameManager> {
 
     const string _SaveKey = "UserData";
@@ -15,22 +17,16 @@ public class GameManager : Singleton<GameManager> {
     }
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            LevelUp();
-        }
+
     }
 
-    void LevelUp () {
-        user.level += 1;
-        Save();
-    }
-
-    //保存
+    //データ保存（変数userの情報がjsonで記録される）
     void Save () {
         string json = JsonUtility.ToJson( user );
         PlayerPrefs.SetString(_SaveKey, json);
     }
 
+    //ユーザー登録
     public void UserRegister(string name,string place){
         if (user == null)
         {
@@ -41,13 +37,23 @@ public class GameManager : Singleton<GameManager> {
         Save();
         MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.MAIN);
     }
-    public void SendMesRegister(string message,float distance){
+
+    //送信メッセージを保存　メッセージ内容と目的地
+    public void SaveSendMessage(string message,string dest){
         SentMessage st=new SentMessage();
         st.sendMessage=message;
         st.sendPlace=user.comeplace;
-        st.dateTime=DateTime.Now;
-        st.distance=distance;
+        st.dateTime=DateTime.Now.ToString();
+        //Debug.Log(DateTime.Now);
+        //st.distance=distance;
+        st.destination=dest;
         user.sentMessages.Add(st);
+        Save();
+    }
+
+    //送信メッセージの履歴　全消去
+    public void MessageAllDelete(){
+        user.sentMessages.RemoveRange(0,user.sentMessages.Count);
         Save();
     }
 }
