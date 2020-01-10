@@ -21,7 +21,7 @@ public class ShowResult : MonoBehaviour
         Textdeliverscript = Textdeliver.GetComponent<TextDeliver>();
 
         ResultText = GetComponentInChildren<Text>();
-        ResultText.text = "あなたの力で\n" + Resultdeliverscript.deliverString + "に\n届きました";
+        ResultText.text = "あなたの力で\n" + Resultdeliverscript.deliverString + "に\n届きました\nメッセージ内容\n" + Textdeliverscript.deliverText;
         Debug.Log(Textdeliverscript.deliverText);
     }
 
