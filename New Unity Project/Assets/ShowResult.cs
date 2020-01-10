@@ -21,13 +21,16 @@ public class ShowResult : MonoBehaviour
         Textdeliverscript = Textdeliver.GetComponent<TextDeliver>();
 
         ResultText = GetComponentInChildren<Text>();
-        ResultText.text = "あなたの力で\n" + Resultdeliverscript.deliverString + "に\n届きました\nメッセージ内容\n" + Textdeliverscript.deliverText;
+        ResultText.text = "あなたの力で\n" + Resultdeliverscript.deliverString + "に\n届きました\n\nメッセージ内容\n" + Textdeliverscript.deliverText;
         Debug.Log(Textdeliverscript.deliverText);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (TouchManager.Instance.m_TouchFlag)
+        {
+            MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.MAIN);
+        }
     }
 }

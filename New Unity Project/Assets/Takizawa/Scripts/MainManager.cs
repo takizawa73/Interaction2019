@@ -20,4 +20,9 @@ public class MainManager : Singleton<MainManager>
     {
         MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.CONFIG);
     }
+
+    public void StartGame()
+    {
+        MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.GAME);
+    }
 }
