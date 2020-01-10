@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -124,9 +124,9 @@ GameObject:
   - component: {fileID: 131685160}
   - component: {fileID: 131685159}
   - component: {fileID: 131685158}
-  - component: {fileID: 131685157}
-  - component: {fileID: 131685156}
-  - component: {fileID: 131685162}
+  - component: {fileID: 131685165}
+  - component: {fileID: 131685164}
+  - component: {fileID: 131685163}
   m_Layer: 0
   m_Name: Sumaho
   m_TagString: Untagged
@@ -134,41 +134,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &131685156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131685155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da71d1b1b277384a9da71debab1bfee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SUMx: 0
-  SUMy: 0
-  SUMz: 0
-  SUMall: 0
-  Heading: 0
-  Latitude: 0
-  Longitude: 0
-  Distance: 0
-  update: {fileID: 0}
---- !u!114 &131685157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131685155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a96296fb8587140b02e35e66646996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lat2: 0
-  lon2: 0
 --- !u!65 &131685158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -241,7 +206,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &131685162
+--- !u!114 &131685163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,10 +215,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 131685155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db109cd382b1ba74eae1ad4ae3e2398a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c6c8f1764119cc41928139ab7990e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ResultCountry: 
+--- !u!114 &131685164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131685155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3e4eadd3f371949b10a8fb63e77e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lat2: 0
+  lon2: 0
+--- !u!114 &131685165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131685155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47f8f0f987ffec49af83c64e1077a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SUMx: 0
+  SUMy: 0
+  SUMz: 0
+  SUMall: 0
+  Heading: 0
+  Latitude: 0
+  Longitude: 0
+  Distance: 0
+  update: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 282453992}
-  - component: {fileID: 282453991}
+  - component: {fileID: 282453993}
   m_Layer: 0
   m_Name: AccBarCtrl
   m_TagString: Untagged
@@ -376,18 +376,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &282453991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282453990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7412991fb89f67429e5665808dafafa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &282453992
 Transform:
   m_ObjectHideFlags: 0
@@ -402,6 +390,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282453993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282453990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424aa83dc31890c4c9c088ea8f0eee95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,11 +532,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 559838272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2a80aae5a473514295ca80c8f991fcb, type: 3}
+  m_Script: {fileID: 11500000, guid: c8a5ab4929f2e794c8b42c1eb6d8f3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minute: 0
-  seconds: 15
+  seconds: 3
 --- !u!114 &559838275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099888414}
-  - component: {fileID: 1099888415}
+  - component: {fileID: 1099888416}
   m_Layer: 0
   m_Name: ResultDeliver
   m_TagString: Untagged
@@ -937,7 +937,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1099888415
+--- !u!114 &1099888416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099888413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2980cbb207083f845965111ab89729ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 024dfd410895ceb49af48742b5376f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deliverString: 
