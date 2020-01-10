@@ -90,4 +90,9 @@ public class ConfigUIManager : MonoBehaviour
     public void GoMessageRegisterScene(){
         SceneManager.LoadScene("MesRegister");
     }
+
+    public void ReturnToMain()
+    {
+        MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.MAIN);
+    }
 }
