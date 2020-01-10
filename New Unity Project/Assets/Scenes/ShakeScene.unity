@@ -127,6 +127,10 @@ GameObject:
   - component: {fileID: 131685157}
   - component: {fileID: 131685156}
   - component: {fileID: 131685162}
+  - component: {fileID: 131685166}
+  - component: {fileID: 131685165}
+  - component: {fileID: 131685164}
+  - component: {fileID: 131685163}
   m_Layer: 0
   m_Name: Sumaho
   m_TagString: Untagged
@@ -146,15 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da71d1b1b277384a9da71debab1bfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SUMx: 0
-  SUMy: 0
-  SUMz: 0
-  SUMall: 0
-  Heading: 0
-  Latitude: 0
-  Longitude: 0
-  Distance: 0
-  update: {fileID: 0}
 --- !u!114 &131685157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a96296fb8587140b02e35e66646996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lat2: 0
-  lon2: 0
 --- !u!65 &131685158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -253,7 +246,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db109cd382b1ba74eae1ad4ae3e2398a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &131685163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131685155}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526ae14571bbd2d43aac11531b37998a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntervalSeconds: 1
+  Status: 0
+  latitude: 0
+--- !u!114 &131685164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131685155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6c8f1764119cc41928139ab7990e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   ResultCountry: 
+--- !u!114 &131685165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131685155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3e4eadd3f371949b10a8fb63e77e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lat2: 0
+  lon2: 0
+--- !u!114 &131685166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131685155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47f8f0f987ffec49af83c64e1077a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SUMx: 0
+  SUMy: 0
+  SUMz: 0
+  SUMall: 0
+  Heading: 0
+  Latitude: 0
+  Longitude: 0
+  Distance: 0
+  update: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +551,7 @@ GameObject:
   - component: {fileID: 559838276}
   - component: {fileID: 559838275}
   - component: {fileID: 559838274}
+  - component: {fileID: 559838277}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -535,8 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a80aae5a473514295ca80c8f991fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minute: 0
-  seconds: 15
 --- !u!114 &559838275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,8 +609,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -574,6 +626,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559838272}
   m_CullTransparentMesh: 0
+--- !u!114 &559838277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559838272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a5ab4929f2e794c8b42c1eb6d8f3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minute: 0
+  seconds: 15
 --- !u!1 &679690986
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679690987}
   - component: {fileID: 679690988}
+  - component: {fileID: 679690989}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -659,8 +726,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+--- !u!114 &679690989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679690986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424aa83dc31890c4c9c088ea8f0eee95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &714946762
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,8 +893,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 300
@@ -895,8 +970,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -924,6 +997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099888414}
   - component: {fileID: 1099888415}
+  - component: {fileID: 1099888416}
   m_Layer: 0
   m_Name: ResultDeliver
   m_TagString: Untagged
@@ -955,6 +1029,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2980cbb207083f845965111ab89729ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1099888416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099888413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024dfd410895ceb49af48742b5376f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deliverString: 
@@ -1079,8 +1165,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
