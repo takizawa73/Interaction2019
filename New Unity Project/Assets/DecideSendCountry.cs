@@ -7,6 +7,8 @@ using System;
 public class DecideSendCountry : MonoBehaviour
 {
     TextAsset csvFile;
+    TextAsset MessageFile;
+    List<string[]> MessageDatas = new List<string[]>();
     List<string[]> csvDatas = new List<string[]>();
     List<double> Latitudelist = new List<double>();
     List<double> Longitudelist = new List<double>();
@@ -15,6 +17,7 @@ public class DecideSendCountry : MonoBehaviour
     CalculatePoint CalPscript;
 
     int Datanum = 0;
+    int DatanumM = 0;
     double PointDistance = 0.0f;
     double MaxDistance = 40000000;
     double NearLat;
@@ -31,10 +34,13 @@ public class DecideSendCountry : MonoBehaviour
         csvFile = Resources.Load("CountryList_txt") as TextAsset;
         StringReader reader = new StringReader(csvFile.text);
 
+        MessageFile = Resources.Load("MessageList") as TextAsset;
+        StringReader readerM = new StringReader(MessageFile.text);
+
         //Debug.Log(csvFile.text);
 
         //Debug.Log("DecideStart");
-        
+
         while (reader.Peek() != -1)
         {
             string line = reader.ReadLine();
@@ -42,6 +48,16 @@ public class DecideSendCountry : MonoBehaviour
             //Latitudelist.Add(double.Parse(csvDatas[i][1]));
            // Longitudelist.Add(double.Parse(csvDatas[i][2]));
             Datanum++;
+            //Debug.Log(line);
+            //Debug.Log(csvDatas[2][2]);
+        }
+        while (readerM.Peek() != -1)
+        {
+            string line = readerM.ReadLine();
+            MessageDatas.Add(line.Split(','));
+            //Latitudelist.Add(double.Parse(csvDatas[i][1]));
+            // Longitudelist.Add(double.Parse(csvDatas[i][2]));
+            DatanumM++;
             //Debug.Log(line);
             //Debug.Log(csvDatas[2][2]);
         }
@@ -76,5 +92,6 @@ public class DecideSendCountry : MonoBehaviour
         }
         Debug.Log(csvDatas[Nearnum][0] + ", " + NearLat + ", " + NearLon);
         ResultCountry = csvDatas[Nearnum][0];
+        Debug.Log(MessageDatas[0][0] + ", " + MessageDatas[1][0]);
     }
 }
