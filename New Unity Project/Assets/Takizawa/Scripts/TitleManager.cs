@@ -21,14 +21,19 @@ public class TitleManager : Singleton<TitleManager>
 
         if (TouchManager.Instance.m_TouchFlag)
         {
-            if (!PlayerPrefs.HasKey("UserData"))
-            {
-                MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.REGISTER);
-            }
-            else
-            {
-                MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.MAIN);
-            }
+            ChangeSceneFromTitle();
+        }
+    }
+
+    public void ChangeSceneFromTitle()
+    {
+        if (!PlayerPrefs.HasKey("UserData"))
+        {
+            MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.REGISTER);
+        }
+        else
+        {
+            MySceneManager.Instance.ChangeScene(MySceneManager.E_Scene.MAIN);
         }
     }
 }
