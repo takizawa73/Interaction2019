@@ -70,16 +70,26 @@ public class DecideSendCountry : MonoBehaviour
     }
     public void DecideSend()
     {
-        //Debug.Log(csvDatas[2][2]);
+        Debug.Log("DecideSendStart:" + CalPscript.lat2　+ ", " + CalPscript.lon2);
         //Debug.Log(Latitudelist[1] + ", " + Longitudelist[1]);
 
         int i = 1;
         while (i < Datanum)
         {
+
+            if (Math.Sign(CalPscript.lat2) != Math.Sign(double.Parse(csvDatas[i][2])))
+            {
+                i++;
+                continue;
+            }
+            if (Math.Sign(CalPscript.lon2) != Math.Sign(double.Parse(csvDatas[i][3])))
+            {
+                i++;
+                continue;
+            }
+
             PointDistance = Math.Sqrt((CalPscript.lat2 - double.Parse(csvDatas[i][2])) * (CalPscript.lat2 - double.Parse(csvDatas[i][2])) 
                 + (CalPscript.lon2 - double.Parse(csvDatas[i][3])) * (CalPscript.lon2 - double.Parse(csvDatas[i][3])));
-
-            i++;
 
             if(PointDistance < MaxDistance)
             {
@@ -87,11 +97,13 @@ public class DecideSendCountry : MonoBehaviour
                 NearLat = double.Parse(csvDatas[i][2]);
                 NearLon = double.Parse(csvDatas[i][3]);
                 Nearnum = i;
-                Debug.Log("PointDisttance" + PointDistance + ", " + csvDatas[i][1]);
+                Debug.Log("PointDisttance" + PointDistance + ", " + NearLat + ", " + NearLon + ", " + csvDatas[i][1]);
             }
+
+            i++;
         }
-        Debug.Log(csvDatas[Nearnum][0] + ", " + NearLat + ", " + NearLon);
+        Debug.Log(csvDatas[Nearnum][1] + ", " + NearLat + ", " + NearLon);
         ResultCountry = csvDatas[Nearnum][0];
-        Debug.Log(MessageDatas[0][0] + ", " + MessageDatas[1][0]);
+        //Debug.Log(MessageDatas[0][0] + ", " + MessageDatas[1][0]);
     }
 }
